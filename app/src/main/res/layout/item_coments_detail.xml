@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_coments"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="23dp"
+            android:layout_marginBottom="15dp"
+            />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="23dp"
+            android:layout_marginBottom="15dp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/img_coments"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:ellipsize="marquee"
+                    android:id="@+id/txt_comm_username"
+                    android:layout_width="95dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sarabun_bold"
+                    android:singleLine="true"
+                    android:textColor="@color/loctitle"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:ellipsize="marquee"
+                    android:singleLine="true"
+                    android:id="@+id/txt_comm_datetime"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_toRightOf="@+id/txt_comm_username"
+                    android:fontFamily="@font/sarabun_regular"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:textColor="@color/locsubtitle"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:id="@+id/img_deletecoments"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/ic_baseline_delete_outline_24"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txt_comm_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/locsubtitle"
+                android:textSize="13sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/msgview"
+                android:visibility="gone" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

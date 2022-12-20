@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/lin_toplogin"
+    tools:context="com.nmnews.nmnewsagency.activity.LoginActivity">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/logo2"
+        android:visibility="visible" />
+
+
+    <RelativeLayout
+        android:layout_marginBottom="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/center">
+
+        <RelativeLayout
+            android:id="@+id/but_user"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="30dp"
+
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/fb"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/img_fb"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/ic_fb" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/img_fb"
+                android:singleLine="true"
+                android:text="Sign in with Facebok"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="normal" />
+
+        </RelativeLayout>
+        <com.facebook.login.widget.LoginButton
+            android:id="@+id/login_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/but_reporter"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/but_user"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/buroncornerwithoutcolour"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/googl"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/ic_google" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/googl"
+                android:singleLine="true"
+                android:text="Sign in with Google"
+                android:textColor="@color/loctitle"
+                android:textSize="18sp"
+                android:textStyle="normal" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <ImageButton
+        android:layout_marginBottom="30dp"
+        android:id="@+id/center"
+        android:layout_width="170dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/ic_fb"
+        android:visibility="invisible" />
+</RelativeLayout>

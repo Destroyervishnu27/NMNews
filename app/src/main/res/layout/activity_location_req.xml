@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/main_activity_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/sarabun_bold"
+                android:text="@string/locreq"
+                android:textColor="@color/loctitle"
+                android:textSize="28dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="60dp"
+                android:fontFamily="@font/sarabun_regular"
+                android:gravity="center_horizontal"
+                android:text="@string/loccsub"
+                android:textColor="@color/locsubtitle"
+                android:textSize="17dp" />
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                app:srcCompat="@drawable/ic_mask_group_4"
+                tools:ignore="VectorDrawableCompat" />
+
+            <Button
+                android:visibility="gone"
+                android:id="@+id/but_selfloc"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="35dp"
+                android:background="@drawable/buroncorner"
+                android:text="@string/locbut"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/but_loc_manually"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginRight="35dp"
+                android:background="@drawable/buroncorner"
+                android:text="@string/locbut1"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.nmnews.nmnewsagency.fragment.FragmentSearchTab">
+
+    <LinearLayout
+        android:id="@+id/lin_searchwithedit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        tools:context=".fragment.HomeFragment">
+
+        <ImageView
+            android:id="@+id/iamge_back_searchtopbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:background="?android:attr/selectableItemBackground"
+            app:srcCompat="@drawable/ic_iconly_light_arrow___left"
+            tools:ignore="VectorDrawableCompat" />
+
+        <EditText
+            android:id="@+id/search_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/searchtopbar"
+            android:fontFamily="@font/sarabun_regular"
+            android:hint="@string/searchitem"
+            android:imeOptions="actionDone"
+            android:padding="10dp"
+            android:paddingLeft="5dp"
+            android:singleLine="true"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <com.athbk.slidingtablayout.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        app:tabTextColor="@color/locbutonbag"
+        app:tab_orientation="horizontal"
+        app:tab_padding_bottom="15dp"
+        app:tab_padding_top="15dp"
+        app:tab_under_line_color="@color/locbutonbag" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

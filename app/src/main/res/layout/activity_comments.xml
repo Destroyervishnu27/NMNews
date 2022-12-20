@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/lin_topcomm"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.nmnews.nmnewsagency.activity.CommentsActivity">
+
+    <RelativeLayout
+        android:id="@+id/rel_top_upload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="14dp">
+
+        <ImageView
+            android:id="@+id/iamge_back_comment"
+            android:layout_width="40dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="5dp"
+            android:background="?android:attr/selectableItemBackground"
+            app:srcCompat="@drawable/ic_iconly_light_arrow___left__2_"
+            tools:ignore="VectorDrawableCompat" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:fontFamily="@font/sarabun_bold"
+                android:singleLine="true"
+                android:text="Comments"
+                android:textColor="@color/loctitle"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/txt_newvideo_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="5dp"
+            android:fontFamily="@font/sarabun_bold"
+            android:singleLine="true"
+            android:text="@string/submit"
+            android:textColor="@color/locbutonbag"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/msgview" />
+
+    <RelativeLayout
+        android:background="@color/white"
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recy_comment_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="60dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="horizontal"
+            android:scrollbars="none" />
+        <View
+            android:layout_above="@+id/lin_send"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/msgview" />
+        <RelativeLayout
+            android:id="@+id/lin_send"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="end|bottom"
+            android:layout_marginBottom="10dp"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="15dp"
+                android:layout_toLeftOf="@+id/img_send"
+                android:background="@drawable/searchtopbar"
+                android:padding="10dp">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edittext_coments"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:fontFamily="@font/sarabun_regular"
+                    android:hint="@string/typeacom"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/locsubtitle"
+                    android:textColorHint="@color/locsubtitle" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_alignParentBottom="true"
+                android:id="@+id/img_send"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="13dp"
+                app:srcCompat="@drawable/ic_group_7901"
+                tools:ignore="VectorDrawableCompat" />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

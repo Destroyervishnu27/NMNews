@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/lin_toplin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        tools:context="com.nmnews.nmnewsagency.activity.NewVideoActivity">
+
+        <RelativeLayout
+            android:id="@+id/rel_top_upload"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="14dp">
+
+            <ImageView
+                android:id="@+id/iamge_back_newvideo"
+                android:layout_width="40dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="5dp"
+                android:background="?android:attr/selectableItemBackground"
+                app:srcCompat="@drawable/ic_iconly_light_arrow___left__2_"
+                tools:ignore="VectorDrawableCompat" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:fontFamily="@font/sarabun_bold"
+                    android:singleLine="true"
+                    android:text="@string/newvideo"
+                    android:textColor="@color/loctitle"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_newvideo_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="5dp"
+                android:fontFamily="@font/sarabun_bold"
+                android:singleLine="true"
+                android:text="@string/submit"
+                android:textColor="@color/locbutonbag"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="16dp"
+            android:background="@color/msgview" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="18dp"
+                        android:layout_weight="2.2"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txt_userid"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/sarabun_bold"
+                            android:singleLine="true"
+                            android:textColor="@color/loctitle"
+                            android:textSize="21sp" />
+
+                        <!--<com.hendraanggrian.appcompat.widget.SocialAutoCompleteTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="What's on your mind?"
+                            android:visibility="gone"
+                            app:hyperlinkColor="@color/locbutonbag"
+                            app:socialFlags="hashtag|mention" />-->
+
+                        <MultiAutoCompleteTextView
+                            android:id="@+id/autoCompleteTextView"
+                            android:layout_width="250dp"
+                            android:layout_height="140dp"
+                            android:layout_marginTop="17dp"
+                            android:background="@null"
+                            android:dropDownWidth="match_parent"
+                            android:dropDownHeight="fill_parent"
+                            android:fontFamily="@font/sarabun_regular"
+                            android:gravity="top|left"
+                            android:hint="@string/writeheading"
+                            android:inputType="textMultiLine"
+                            android:maxLength="120"
+                            android:maxLines="6"
+                            android:scrollHorizontally="false"
+                            android:singleLine="false"
+                            android:textColor="@color/tabselct"
+                            android:textColorHint="@color/tabselct"
+                            android:textSize="17sp"
+                            android:verticalScrollbarPosition="right"
+                            android:visibility="visible">
+
+                            <requestFocus />
+                        </MultiAutoCompleteTextView>
+
+                    </LinearLayout>
+
+                    <FrameLayout
+                        android:id="@+id/frame_video_open"
+                        android:layout_width="0dp"
+                        android:layout_height="130dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0.7">
+
+                        <ImageView
+                            android:id="@+id/img_newvideo_url"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:scaleType="fitXY" />
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:src="@drawable/ic_play" />
+
+                    </FrameLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txt_remainin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/sarabun_regular"
+                    android:singleLine="true"
+                    android:text="@string/remaing"
+                    android:textColor="@color/tabselct"
+                    android:textSize="15sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:id="@+id/lin_hashtag"
+                        android:layout_width="35dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="18dp"
+                        android:background="@drawable/searchtopbar">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="#"
+                            android:textColor="@color/loctitle"
+                            android:textSize="18sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/lin_attherate"
+                        android:layout_width="35dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/searchtopbar">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="@string/adrew"
+                            android:textColor="@color/loctitle"
+                            android:textSize="18sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@color/newvideo" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recy_newVideo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="60dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="horizontal"
+                    android:scrollbars="none"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/lin_showlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <RelativeLayout
+                        android:id="@+id/rel_addvoice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:id="@+id/img_iconnoti"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            app:srcCompat="@drawable/ic_group_7914"
+                            tools:ignore="VectorDrawableCompat" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_toRightOf="@+id/img_iconnoti"
+                            android:fontFamily="@font/sarabun_regular"
+                            android:text="@string/addvoice"
+                            android:textColor="@color/loctitle"
+                            android:textSize="18sp" />
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/chkState"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:textOff=""
+                            android:textOn=""
+                            android:visibility="invisible" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginRight="16dp"
+                        android:background="@color/newvideo" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:id="@+id/img_chose"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            app:srcCompat="@drawable/ic_group_7915"
+                            tools:ignore="VectorDrawableCompat" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_toRightOf="@+id/img_chose"
+                            android:fontFamily="@font/sarabun_regular"
+                            android:text="@string/choseplace"
+                            android:textColor="@color/loctitle"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/txt_chooselocation"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="20dp"
+                            android:fontFamily="@font/sarabun_regular"
+                            android:text="@string/chnge"
+                            android:textColor="@color/loctitle"
+                            android:textSize="17sp" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginRight="16dp"
+                        android:background="@color/newvideo" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:id="@+id/img_breking"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            app:srcCompat="@drawable/ic_group_7916"
+                            tools:ignore="VectorDrawableCompat" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_toRightOf="@+id/img_breking"
+                            android:fontFamily="@font/sarabun_regular"
+                            android:text="@string/brekingnews"
+                            android:textColor="@color/loctitle"
+                            android:textSize="18sp" />
+
+                        <LinearLayout
+                            android:id="@+id/lin_brekingnews"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/newvideo"
+                            android:orientation="vertical">
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="30dp"
+                        android:background="@color/uploaddoc"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/sarabun_regular"
+                            android:text="@string/posttype"
+                            android:textColor="@color/locsubtitle"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/sarabun_bold"
+                            android:text="Fill in the information below with reference to the video you posted !!"
+                            android:textColor="@color/loctitle"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/sarabun_regular"
+                            android:text="Notice: In case of incorrect information, appropriate action will be taken"
+                            android:textColor="@color/locsubtitle"
+                            android:textSize="12sp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="10dp"
+                            android:orientation="vertical">
+
+                            <CheckBox
+
+                                android:id="@+id/radio_frst"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:enabled="true"
+                                android:text="@string/itislong"
+                                android:textColor="@color/loctitle"
+                                android:textSize="16sp" />
+
+                            <CheckBox
+                                android:id="@+id/radio_second"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text="@string/loreadumy"
+                                android:textColor="@color/loctitle"
+                                android:textSize="16sp" />
+
+                            <CheckBox
+                                android:id="@+id/radio_thrd"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text="All content in this video is real"
+                                android:textColor="@color/loctitle"
+                                android:textSize="16sp" />
+
+                            <CheckBox
+                                android:id="@+id/radio_fourth"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text="All content in this video is symbolic/duplicate"
+                                android:textColor="@color/loctitle"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+</LinearLayout>

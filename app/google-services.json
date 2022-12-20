@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1062635022689",
+    "project_id": "nmnews-fd5b8",
+    "storage_bucket": "nmnews-fd5b8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1062635022689:android:2b691c5b803ead79087d20",
+        "android_client_info": {
+          "package_name": "com.nmnews.nmnewsagency"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1062635022689-jd0om64e6g17tuo2rvhhuonv05ejg1kk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nmnews.nmnewsagency",
+            "certificate_hash": "c5c0efe80500367635ec7fbf814a98d60bccd94e"
+          }
+        },
+        {
+          "client_id": "1062635022689-p0d0c63j23esg83gjclnu5qu13mkg6cc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCx6LRpHZu5MS4DnxNZy8W-AQqVLdWrWew"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1062635022689-p0d0c63j23esg83gjclnu5qu13mkg6cc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical"
+    android:id="@+id/rel_audiotop"
+    tools:context="com.nmnews.nmnewsagency.activity.AudioRecordActivity">
+
+    <ImageView
+        android:id="@+id/iamge_back_audio_record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:padding="30dp"
+        app:srcCompat="@drawable/ic_group_7874"
+        tools:ignore="VectorDrawableCompat" />
+
+    <ImageView
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitXY"
+        android:id="@+id/img_thumbnail"
+        android:layout_width="fill_parent"
+        android:layout_height="400dp"
+        android:layout_below="@+id/iamge_back_audio_record"
+        android:visibility="visible"
+       />
+
+    <VideoView
+        android:layout_below="@+id/iamge_back_audio_record"
+        android:id="@+id/vidview_audiorecord"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_centerHorizontal="true"
+        android:fitsSystemWindows="true"
+        android:visibility="gone" />
+    <SeekBar
+        android:visibility="gone"
+        android:id="@+id/seekbar"
+        style="@style/Base.Widget.AppCompat.SeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/SeekBar" />
+    <TextView
+        android:id="@+id/txt_timeer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/vidview_audiorecord"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:text="00:00"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/lin_tapheare_audio"
+        android:layout_width="390dp"
+        android:layout_height="40dp"
+        android:layout_above="@+id/frme_butonaudio"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/addvideo">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:fontFamily="@font/sarabun_bold"
+            android:gravity="center_horizontal|center_vertical"
+            android:singleLine="true"
+            android:text="Touch and Hold the button for recording audio"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/frme_butonaudio"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="70dp"
+        android:layout_marginBottom="50dp">
+
+        <Button
+            android:id="@+id/button_save"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:background="@drawable/locationborderitemwithred"
+            android:text="Save"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/button_audiocapture"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:background="@drawable/ic_recordingstop"
+            android:visibility="visible" />
+
+        <me.tankery.lib.circularseekbar.CircularSeekBar
+            android:id="@+id/seek_bar"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone"
+            app:cs_circle_stroke_width="8dp"
+            app:cs_circle_style="round"
+            app:cs_disable_pointer="false"
+            app:cs_negative_enabled="false"
+            app:cs_pointer_angle="1"
+            app:cs_pointer_stroke_width="8dp" />
+    </FrameLayout>
+</RelativeLayout>

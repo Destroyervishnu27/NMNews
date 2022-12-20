@@ -1,0 +1,4 @@
+rootProject.name = "NMNewsAgency"
+include ':app'
+include ':android-ffmpeg'
+include ':SSffmpegVideoOperation'

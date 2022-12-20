@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rel_dialogtop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@null"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/dialog_botom"
+        android:orientation="vertical">
+
+        <ImageView
+            android:background="?android:attr/selectableItemBackground"
+            android:id="@+id/img_close_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:padding="20dp"
+            android:src="@drawable/ic_baseline_clear_24" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:fontFamily="@font/sarabun_bold"
+            android:singleLine="true"
+            android:text="@string/vidreprsn"
+            android:textColor="@color/loctitle"
+            android:textSize="22sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:fontFamily="@font/sarabun_regular"
+            android:gravity="center"
+            android:text="What is the reason for your complaint?"
+            android:textColor="@color/locsubtitle"
+            android:textSize="18sp" />
+
+
+        <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="25dp">
+
+            <RadioButton
+                android:id="@+id/radio_frst"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sarabun_semibold"
+                android:text="@string/sexualcontent"
+                android:textSize="18sp" />
+
+            <RadioButton
+                android:id="@+id/radio_scond"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/sarabun_semibold"
+                android:text="@string/violnce"
+                android:textSize="18sp" />
+
+            <RadioButton
+                android:id="@+id/radio_thrd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/sarabun_semibold"
+                android:text="@string/hateful"
+                android:textSize="18sp" />
+
+            <RadioButton
+                android:id="@+id/radio_furth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/sarabun_semibold"
+                android:text="@string/harmful"
+                android:textSize="18sp" />
+
+            <RadioButton
+                android:id="@+id/radio_fifth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/sarabun_semibold"
+                android:text="@string/spam"
+                android:textSize="18sp" />
+
+            <RadioButton
+                android:id="@+id/radio_six"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/sarabun_semibold"
+                android:text="@string/other"
+                android:textSize="18sp" />
+        </RadioGroup>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            app:hintTextColor="@color/locsubtitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txt_report_subtitle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:fontFamily="@font/sarabun_bold"
+                android:hint="@string/typeamessage"
+                android:singleLine="true"
+                android:textColor="@color/loctitle" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/rel_top_upload"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/msgview" />
+
+        <Button
+            android:id="@+id/but_submit"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/buroncorner"
+            android:fontFamily="@font/sarabun_semibold"
+            android:text="@string/submit"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </LinearLayout>
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>

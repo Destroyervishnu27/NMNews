@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.nmnews.nmnewsagency">
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the "MyLocation" functionality.
+    -->
+    <uses-feature android:name="android.hardware.camera.front" />
+
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission. ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" /> -->
+    <uses-permission
+        android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.RECORD_VIDEO" />
+    <uses-permission android:name="android.permission.MICROPHONE " />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-permission
+        android:name="com.google.android.gms.permission.AD_ID"
+        tools:node="remove" />
+
+    <application
+        android:name=".Application"
+        android:allowBackup="true"
+        android:extractNativeLibs="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:testOnly="false"
+        android:theme="@style/Theme.NMNewsAgency"
+        android:usesCleartextTraffic="true"
+        tools:ignore="ExtraText">
+        <activity
+            android:name=".activity.LikesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.UploadNewsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".activity.ShairedVideoActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ContactUsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.TermsAndConditionsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.DownloadVideoActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ChooseLocationActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.PrivacyTermsActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AudioRecordActivity"
+            android:screenOrientation="portrait"
+            android:exported="false"/>
+        <activity
+            android:name=".activity.AudioRecordPreviews"
+            android:screenOrientation="portrait"
+            android:exported="false"/>
+        <activity
+            android:name=".activity.RecordingPreviewActivity"
+            android:screenOrientation="portrait"
+            android:exported="false"/>
+        <activity
+            android:name=".activity.CommentsActivity"
+            android:screenOrientation="portrait"
+            android:exported="false"/>
+        <activity
+            android:name=".activity.SearchTopBarTabingActivity"
+            android:screenOrientation="portrait"
+            android:exported="false"/>
+        <activity
+            android:name=".activity.LoginActivity"
+            android:screenOrientation="portrait"
+            android:exported="false"/>
+        <activity
+            android:name=".activity.VideoViewActivity22"
+            android:screenOrientation="portrait"
+            android:exported="false"/>
+        <activity
+            android:name=".activity.SelfLocationActivity"
+            android:screenOrientation="portrait"
+            android:exported="false"/>
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".activity.NewVideoActivity"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".activity.RejectedVideoActivity"
+            android:screenOrientation="portrait"
+            android:exported="false"/>
+        <activity
+            android:name=".activity.OwnVideoDetailActivity"
+            android:screenOrientation="portrait"
+            android:exported="false"/>
+        <activity
+            android:name=".activity.UserProfileActivity"
+            android:screenOrientation="portrait"
+            android:exported="false"/>
+        <activity
+            android:name=".activity.UserOwnDegtailProfileActivity"
+            android:screenOrientation="portrait"
+            android:exported="false"/>
+        <activity
+            android:name=".activity.SettingActivity"
+            android:screenOrientation="portrait"
+            android:exported="false"/>
+        <activity
+            android:name=".activity.CovrageQualityActivity"
+            android:screenOrientation="portrait"
+            android:exported="false"/>
+        <activity
+            android:name=".activity.FollowersActivituy"
+            android:screenOrientation="portrait"
+            android:exported="false"/>
+        <activity
+            android:name=".activity.FollowingActivituy"
+            android:screenOrientation="portrait"
+            android:exported="false"/>
+        <activity
+            android:name=".activity.EditProfileActivity"
+            android:screenOrientation="portrait"
+            android:exported="false"/>
+        <activity
+            android:name=".activity.UploadDocumentActivity"
+            android:screenOrientation="portrait"
+            android:exported="false"/>
+        <activity
+            android:name=".activity.PerformanceReporter"
+            android:screenOrientation="portrait"
+            android:exported="false"/>
+        <activity
+            android:name=".activity.MessageActivity"
+            android:screenOrientation="portrait"
+            android:exported="false"/>
+        <activity
+            android:name=".activity.HashTagDetailActivity"
+            android:screenOrientation="portrait"
+            android:exported="false"/>
+        <activity
+            android:name=".activity.MainActivity"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.SelectLocationActivity"
+            android:screenOrientation="portrait"
+            android:exported="false"/>
+        <activity
+            android:name=".activity.LocationReqActivity"
+            android:screenOrientation="portrait"
+            android:exported="false"/>
+        <activity
+            android:name=".activity.SplashScreen"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="nmnews.in"
+                    android:scheme="https" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="www.nmnews.in"
+                    android:scheme="http" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="www.nmnews.in"
+                    android:scheme="app_" />
+            </intent-filter>
+        </activity>
+
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/admob_app_id" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="com.facebook.sdk.ClientToken"
+            android:value="@string/facebook_client_token" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:exported="false"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.ChatActivity"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            tools:ignore="MissingClass" />
+        <activity
+            android:name=".activity.ChatInfoActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <service android:name=".service.NewsViewsCount" />
+        <service android:name=".service.NewsUplaodInBagroundService" />
+        <service android:name=".service.UploadNewWorkerService" />
+        <service
+            android:name=".service.MyFirebaseMessagingService"
+            android:exported="false"
+            tools:ignore="Instantiatable">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+    </application>
+
+</manifest>

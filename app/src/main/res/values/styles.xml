@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_up</item>
+        <item name="android:windowExitAnimation">@anim/slide_bottom</item>
+    </style>
+    <style name="MatchParent">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="MatchWidth">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="dialogue_error">
+        <item name="android:windowEnterAnimation">@anim/enterybottomanimation</item>
+        <item name="android:windowExitAnimation">@anim/slide_down</item>
+    </style>
+    <style name="HorizontalDividerStyle" parent="MatchWidth">
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/adbag</item>
+    </style>
+    <style name="UserIconStyle">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginRight">@dimen/list_item_side_margin</item>
+        <item name="android:scaleType">centerInside</item>
+        <item name="android:layout_marginLeft">@dimen/list_item_side_margin</item>
+        <item name="android:padding">@dimen/padding_common</item>
+    </style>
+
+    <style name="UserTitleStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="UserCheckboxStyle" parent="WrapContent">
+        <item name="android:layout_marginRight">@dimen/list_item_side_margin</item>
+        <item name="android:clickable">false</item>
+        <item name="android:focusableInTouchMode">false</item>
+        <item name="android:focusable">false</item>
+        <item name="android:gravity">right</item>
+    </style>
+
+    <style name="CenterProgressBarStyle" parent="@style/Widget.AppCompat.ProgressBar">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+
+    <style name="ListViewWithoutDividerStyle" parent="MatchParent">
+        <item name="android:divider">@null</item>
+    </style>
+    <style name="ListItem" parent="MatchWidth">
+        <item name="android:layout_height">?android:attr/listPreferredItemHeight</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="WrapContent">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="AlertDialogStyle" parent="Theme.MaterialComponents.Light.Dialog.Alert">
+        <item name="android:textColor">@color/adbag</item>
+        <item name="android:textColorPrimary">@color/black</item>
+    </style>
+</resources>

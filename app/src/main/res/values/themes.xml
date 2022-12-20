@@ -1,0 +1,58 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.NMNewsAgency" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryDark" tools:targetApi="23">@color/loctitle</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/white</item>
+        <!-- Customize your theme here. -->
+
+    </style>
+    <style name="AppTheme2" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="colorAccent">@color/white</item>
+    </style>
+    <style name="Color1SwitchStyle">
+        <item name="colorControlActivated">@color/hashtagfolow</item>
+    </style>
+
+
+    <style name="BaseText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">15dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:shadowDx">-1</item>
+        <item name="android:shadowDy">-1</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:shadowColor">#000000</item>
+        <item name="android:shadowRadius">2</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="card_style">
+        <item name="cardCornerRadius">4dp</item>
+    </style>
+
+    <style name="card_view_with_text" parent="@style/card_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">15dp</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="cardBackgroundColor">@color/percent_50_black</item>
+    </style>
+    <style name="SeekBar" parent="Theme.NMNewsAgency">
+        <item name="colorControlActivated">@color/folow</item>
+        <item name="colorControlNormal">@color/gray</item>
+    </style>
+</resources>
